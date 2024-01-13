@@ -438,8 +438,129 @@
     transition: .3s ease;
   }
    
-
-
+  .button-icon {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+  }
+  
+  .icon {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+  }
+  
+  .icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .cube {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 20px;
+  }
+  
+  .button-icon:hover {
+    border-color: #ff98a2;
+  }
+  
+  .button-icon:hover .cube {
+    transform: rotateX(90deg);
+  }
+  
+  .side {
+    position: absolute;
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  
+  .top {
+    background: #ff98a2;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+  }
+  
+  .front {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+  }
+  
+  .Projects-Button {
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    gap: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(120deg, rgb(150, 86, 199), rgb(98, 47, 138));
+    transition: all 0.3s;
+    box-shadow: 0px 10px 10px rgba(144, 0, 255, 0.166);
+  }
+  .IconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  .svgBG {
+    width: 25px;
+    height: auto;
+  }
+  .svgFG {
+    width: 9px;
+    height: auto;
+    z-index: 2;
+    position: absolute;
+  }
+  .text {
+    color: rgb(240, 240, 240);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .Projects-Button:hover .svgFG {
+    animation: clockwise 2s linear infinite;
+  }
+  
+  .Projects-Button:hover .svgBG {
+    animation: anti-clockwise 2s linear infinite;
+  }
+  @keyframes clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes anti-clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  .Projects-Button:hover {
+    background-color: rgb(119, 57, 166);
+  }
+  
 
 /* *{
     box-sizing: border-box;
